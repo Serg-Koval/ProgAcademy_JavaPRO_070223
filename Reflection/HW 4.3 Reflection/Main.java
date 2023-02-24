@@ -61,7 +61,7 @@ public class Main {
         }
     }
 
-    public static void deSerialize(SerializationExample se, File file) {
+    public static SerializationExample deSerialize(SerializationExample se, File file) {
         Class<?> classs = se.getClass();
         Field[] fields = classs.getDeclaredFields();
 
@@ -98,5 +98,6 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return se;
     }
 }
